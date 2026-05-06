@@ -216,8 +216,8 @@ def create_demo_data():
             "start_date": nowdate(),
             "timepoints": [
                 {"timepoint": "Initial", "target_date": nowdate(), "status": "Completed"},
-                {"timepoint": "3 Months", "target_date": add_days(nowdate(), 90), "status": "Scheduled"},
-                {"timepoint": "6 Months", "target_date": add_days(nowdate(), 180), "status": "Scheduled"}
+                {"timepoint": "3 Months", "target_date": add_days(nowdate(), 90), "status": "Pending"},
+                {"timepoint": "6 Months", "target_date": add_days(nowdate(), 180), "status": "Pending"}
             ]
         })
         doc.insert()
