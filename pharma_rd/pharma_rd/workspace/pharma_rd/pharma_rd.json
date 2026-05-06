@@ -105,311 +105,245 @@
   ],
 
   "links": [
-
     {
       "hidden": 0, "idx": 1,
-      "is_query_report": 0,
       "label": "Research",
-      "link_count": 0,
-      "onboard": 1,
       "title": "Research",
-      "type": "Card Break"
+      "type": "Card Break",
+      "onboard": 1
     },
     {
-      "dependencies": "", "hidden": 0, "idx": 2,
-      "is_query_report": 0,
+      "hidden": 0, "idx": 2,
       "label": "Research Project",
-      "link_count": 0,
       "link_to": "Research Project",
       "link_type": "DocType",
-      "onboard": 1,
-      "type": "Link"
+      "type": "Link",
+      "onboard": 1
     },
     {
-      "dependencies": "", "hidden": 0, "idx": 3,
-      "is_query_report": 0,
+      "hidden": 0, "idx": 3,
       "label": "Drug Candidate",
-      "link_count": 0,
       "link_to": "Drug Candidate",
       "link_type": "DocType",
-      "onboard": 1,
-      "type": "Link"
+      "type": "Link",
+      "onboard": 1
     },
     {
-      "dependencies": "", "hidden": 0, "idx": 4,
-      "is_query_report": 0,
+      "hidden": 0, "idx": 4,
       "label": "Biological Target",
-      "link_count": 0,
       "link_to": "Biological Target",
       "link_type": "DocType",
-      "onboard": 0,
-      "type": "Link"
+      "type": "Link",
+      "onboard": 0
     },
     {
-      "dependencies": "", "hidden": 0, "idx": 5,
-      "is_query_report": 0,
+      "hidden": 0, "idx": 5,
       "label": "Therapeutic Area",
-      "link_count": 0,
       "link_to": "Therapeutic Area",
       "link_type": "DocType",
-      "onboard": 0,
-      "type": "Link"
+      "type": "Link",
+      "onboard": 0
     },
-
     {
       "hidden": 0, "idx": 6,
-      "is_query_report": 0,
       "label": "Clinical",
-      "link_count": 0,
-      "onboard": 1,
       "title": "Clinical",
-      "type": "Card Break"
+      "type": "Card Break",
+      "onboard": 1
     },
     {
-      "dependencies": "", "hidden": 0, "idx": 7,
-      "is_query_report": 0,
+      "hidden": 0, "idx": 7,
       "label": "Clinical Trial",
-      "link_count": 0,
       "link_to": "Clinical Trial",
       "link_type": "DocType",
-      "onboard": 1,
-      "type": "Link"
+      "type": "Link",
+      "onboard": 1
     },
-
     {
       "hidden": 0, "idx": 8,
-      "is_query_report": 0,
       "label": "Quality",
-      "link_count": 0,
-      "onboard": 1,
       "title": "Quality",
-      "type": "Card Break"
+      "type": "Card Break",
+      "onboard": 1
     },
     {
-      "dependencies": "", "hidden": 0, "idx": 9,
-      "is_query_report": 0,
+      "hidden": 0, "idx": 9,
       "label": "QC Test",
-      "link_count": 0,
       "link_to": "QC Test",
       "link_type": "DocType",
-      "onboard": 1,
-      "type": "Link"
+      "type": "Link",
+      "onboard": 1
     },
     {
-      "dependencies": "", "hidden": 0, "idx": 10,
-      "is_query_report": 0,
+      "hidden": 0, "idx": 10,
       "label": "Stability Study",
-      "link_count": 0,
       "link_to": "Stability Study",
       "link_type": "DocType",
-      "onboard": 0,
-      "type": "Link"
+      "type": "Link",
+      "onboard": 0
     },
-
     {
       "hidden": 0, "idx": 11,
-      "is_query_report": 0,
       "label": "Manufacturing",
-      "link_count": 0,
-      "onboard": 0,
       "title": "Manufacturing",
-      "type": "Card Break"
+      "type": "Card Break",
+      "onboard": 0
     },
     {
-      "dependencies": "", "hidden": 0, "idx": 12,
-      "is_query_report": 0,
+      "hidden": 0, "idx": 12,
       "label": "Batch Manufacturing Record",
-      "link_count": 0,
       "link_to": "Batch Manufacturing Record",
       "link_type": "DocType",
-      "onboard": 1,
-      "type": "Link"
+      "type": "Link",
+      "onboard": 1
     },
     {
-      "dependencies": "", "hidden": 0, "idx": 13,
-      "is_query_report": 0,
+      "hidden": 0, "idx": 13,
       "label": "Lab Equipment",
-      "link_count": 0,
       "link_to": "Lab Equipment",
       "link_type": "DocType",
-      "onboard": 0,
-      "type": "Link"
+      "type": "Link",
+      "onboard": 0
     },
-
     {
       "hidden": 0, "idx": 14,
-      "is_query_report": 0,
       "label": "Regulatory",
-      "link_count": 0,
-      "onboard": 0,
       "title": "Regulatory",
-      "type": "Card Break"
+      "type": "Card Break",
+      "onboard": 0
     },
     {
-      "dependencies": "", "hidden": 0, "idx": 15,
-      "is_query_report": 0,
+      "hidden": 0, "idx": 15,
       "label": "Regulatory Submission",
-      "link_count": 0,
       "link_to": "Regulatory Submission",
       "link_type": "DocType",
-      "onboard": 1,
-      "type": "Link"
+      "type": "Link",
+      "onboard": 1
     },
     {
       "hidden": 0, "idx": 16,
-      "is_query_report": 0,
       "label": "Lab Inventory",
-      "link_count": 0,
-      "onboard": 0,
       "title": "Lab Inventory",
-      "type": "Card Break"
+      "type": "Card Break",
+      "onboard": 0
     },
     {
-      "dependencies": "", "hidden": 0, "idx": 17,
-      "is_query_report": 0,
+      "hidden": 0, "idx": 17,
       "label": "Lab Item",
-      "link_count": 0,
       "link_to": "Lab Item",
       "link_type": "DocType",
-      "onboard": 0,
-      "type": "Link"
+      "type": "Link",
+      "onboard": 0
     },
     {
-      "dependencies": "", "hidden": 0, "idx": 18,
-      "is_query_report": 0,
+      "hidden": 0, "idx": 18,
       "label": "Lab Stock Entry",
-      "link_count": 0,
       "link_to": "Lab Stock Entry",
       "link_type": "DocType",
-      "onboard": 0,
-      "type": "Link"
+      "type": "Link",
+      "onboard": 0
     },
-
     {
       "hidden": 0, "idx": 19,
-      "is_query_report": 0,
       "label": "Document Management",
-      "link_count": 0,
-      "onboard": 0,
       "title": "Document Management",
-      "type": "Card Break"
+      "type": "Card Break",
+      "onboard": 0
     },
     {
-      "dependencies": "", "hidden": 0, "idx": 20,
-      "is_query_report": 0,
+      "hidden": 0, "idx": 20,
       "label": "R&D Document",
-      "link_count": 0,
       "link_to": "R&D Document",
       "link_type": "DocType",
-      "onboard": 0,
-      "type": "Link"
+      "type": "Link",
+      "onboard": 0
     },
     {
       "hidden": 0, "idx": 21,
-      "is_query_report": 0,
       "label": "Sample Management",
-      "link_count": 0,
-      "onboard": 0,
       "title": "Sample Management",
-      "type": "Card Break"
+      "type": "Card Break",
+      "onboard": 0
     },
     {
-      "dependencies": "", "hidden": 0, "idx": 22,
-      "is_query_report": 0,
+      "hidden": 0, "idx": 22,
       "label": "Lab Sample",
-      "link_count": 0,
       "link_to": "Lab Sample",
       "link_type": "DocType",
-      "onboard": 0,
-      "type": "Link"
+      "type": "Link",
+      "onboard": 0
     },
     {
       "hidden": 0, "idx": 23,
-      "is_query_report": 0,
       "label": "Research Partners",
-      "link_count": 0,
-      "onboard": 0,
       "title": "Research Partners",
-      "type": "Card Break"
+      "type": "Card Break",
+      "onboard": 0
     },
     {
-      "dependencies": "", "hidden": 0, "idx": 24,
-      "is_query_report": 0,
+      "hidden": 0, "idx": 24,
       "label": "Research Partner",
-      "link_count": 0,
       "link_to": "Research Partner",
       "link_type": "DocType",
-      "onboard": 0,
-      "type": "Link"
+      "type": "Link",
+      "onboard": 0
     },
     {
       "hidden": 0, "idx": 25,
-      "is_query_report": 0,
       "label": "Masters",
-      "link_count": 0,
-      "onboard": 0,
       "title": "Masters",
-      "type": "Card Break"
+      "type": "Card Break",
+      "onboard": 0
     },
     {
-      "dependencies": "", "hidden": 0, "idx": 17,
-      "is_query_report": 0,
+      "hidden": 0, "idx": 26,
       "label": "Therapeutic Area",
-      "link_count": 0,
       "link_to": "Therapeutic Area",
       "link_type": "DocType",
-      "onboard": 0,
-      "type": "Link"
+      "type": "Link",
+      "onboard": 0
     },
     {
-      "dependencies": "", "hidden": 0, "idx": 18,
-      "is_query_report": 0,
+      "hidden": 0, "idx": 27,
       "label": "Biological Target",
-      "link_count": 0,
       "link_to": "Biological Target",
       "link_type": "DocType",
-      "onboard": 0,
-      "type": "Link"
+      "type": "Link",
+      "onboard": 0
     },
-
     {
-      "hidden": 0, "idx": 19,
-      "is_query_report": 0,
+      "hidden": 0, "idx": 28,
       "label": "Analytics",
-      "link_count": 0,
-      "onboard": 0,
       "title": "Analytics",
-      "type": "Card Break"
+      "type": "Card Break",
+      "onboard": 0
     },
     {
-      "dependencies": "", "hidden": 0, "idx": 20,
+      "hidden": 0, "idx": 29,
       "is_query_report": 1,
       "label": "Research Project Summary",
-      "link_count": 0,
       "link_to": "Research Project Summary",
       "link_type": "Report",
-      "onboard": 0,
-      "type": "Link"
+      "type": "Link",
+      "onboard": 0
     },
     {
-      "dependencies": "", "hidden": 0, "idx": 21,
+      "hidden": 0, "idx": 30,
       "is_query_report": 1,
       "label": "Clinical Trial Status",
-      "link_count": 0,
       "link_to": "Clinical Trial Status",
       "link_type": "Report",
-      "onboard": 0,
-      "type": "Link"
+      "type": "Link",
+      "onboard": 0
     },
     {
-      "dependencies": "", "hidden": 0, "idx": 22,
+      "hidden": 0, "idx": 31,
       "is_query_report": 1,
       "label": "QC Test Results Summary",
-      "link_count": 0,
       "link_to": "QC Test Results Summary",
       "link_type": "Report",
-      "onboard": 0,
-      "type": "Link"
+      "type": "Link",
+      "onboard": 0
     }
   ]
 }
