@@ -1,5 +1,5 @@
 {
-  "name": "R&D Document",
+  "name": "RD Document",
   "module": "pharma_rd",
   "doctype": "DocType",
   "is_submittable": 1,
@@ -23,7 +23,7 @@
     {"fieldname": "section_file",   "fieldtype": "Section Break", "label": "File Attachment"},
     {"fieldname": "file_attachment","fieldtype": "Attach",  "label": "Attach Document"},
     {"fieldname": "summary",        "fieldtype": "Small Text","label": "Summary of Changes"},
-    {"fieldname": "amended_from",   "fieldtype": "Link",    "label": "Amended From",      "options": "R&D Document", "read_only": 1, "print_hide": 1}
+    {"fieldname": "amended_from",   "fieldtype": "Link",    "label": "Amended From",      "options": "RD Document", "read_only": 1, "print_hide": 1}
   ],
   "permissions": [
     {"role": "Pharma Admin", "read": 1, "write": 1, "create": 1, "delete": 1, "submit": 1, "cancel": 1, "amend": 1},

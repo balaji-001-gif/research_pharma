@@ -252,8 +252,8 @@
     },
     {
       "hidden": 0, "idx": 20,
-      "label": "R&D Document",
-      "link_to": "R&D Document",
+      "label": "RD Document",
+      "link_to": "RD Document",
       "link_type": "DocType",
       "type": "Link",
       "onboard": 0
