@@ -3,6 +3,7 @@
   "module": "pharma_rd",
   "doctype": "DocType",
   "is_submittable": 1,
+  "autoname": "field:document_id",
   "title_field": "document_title",
   "fields": [
     {"fieldname": "document_id",    "fieldtype": "Data",    "label": "Document ID",       "unique": 1, "in_list_view": 1},

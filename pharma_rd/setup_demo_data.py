@@ -86,7 +86,12 @@ def create_demo_data():
                 "priority": "High",
                 "principal_investigator": pi,
                 "start_date": add_days(nowdate(), -180),
-                "budget": 5000000,
+                "budget_details": [
+                    {"expense_category": "Personnel", "planned_amount": 2000000},
+                    {"expense_category": "Laboratory Supplies", "planned_amount": 1000000},
+                    {"expense_category": "External CRO Fees", "planned_amount": 1500000},
+                    {"expense_category": "Regulatory Fees", "planned_amount": 500000}
+                ],
                 "milestones": [
                     {"milestone_name": "Target Validation", "status": "Completed", "due_date": add_days(nowdate(), -150)},
                     {"milestone_name": "Lead Optimization", "status": "In Progress", "due_date": add_days(nowdate(), 30)}
@@ -243,6 +248,103 @@ def create_demo_data():
             doc.insert()
             doc.submit()
     print("Created Regulatory Submissions.")
+
+    # 11. Research Partners (Phase 2)
+    partners = [
+        {"name": "Global Research CRO", "type": "CRO", "rating": "A (Excellent)"},
+        {"name": "BioTech Synthesis Labs", "type": "CDMO", "rating": "B (Good)"},
+        {"name": "Precision Testing Inc.", "type": "Testing Lab", "rating": "A (Excellent)"}
+    ]
+    for p in partners:
+        if not frappe.db.exists("Research Partner", p["name"]):
+            frappe.get_doc({
+                "doctype": "Research Partner",
+                "partner_name": p["name"],
+                "partner_type": p["type"],
+                "rating": p["rating"],
+                "status": "Active",
+                "email": f"contact@{p['name'].lower().replace(' ', '')}.com",
+                "gxp_certified": 1
+            }).insert()
+    print("Created Research Partners.")
+
+    # 12. Lab Items (Phase 2)
+    items = [
+        {"code": "REAG-001", "name": "Acetonitrile HPLC Grade", "group": "Solvent", "min": 20},
+        {"code": "REAG-002", "name": "Methanol LC-MS Grade", "group": "Solvent", "min": 10},
+        {"code": "CHEM-005", "name": "Sodium Hydroxide 99%", "group": "Chemical", "min": 5},
+        {"code": "EXCP-010", "name": "Microcrystalline Cellulose", "group": "Excipient", "min": 50}
+    ]
+    for i in items:
+        if not frappe.db.exists("Lab Item", i["code"]):
+            frappe.get_doc({
+                "doctype": "Lab Item",
+                "item_code": i["code"],
+                "item_name": i["name"],
+                "item_group": i["group"],
+                "uom": "Litre" if i["group"] == "Solvent" else "kg",
+                "min_stock": i["min"],
+                "current_stock": 0
+            }).insert()
+    print("Created Lab Items.")
+
+    # 13. Lab Stock Entries (Phase 2)
+    if not frappe.db.exists("Lab Stock Entry", {"item": "REAG-001", "entry_type": "Stock In"}):
+        for i in items:
+            doc = frappe.get_doc({
+                "doctype": "Lab Stock Entry",
+                "item": i["code"],
+                "entry_type": "Stock In",
+                "quantity": i["min"] * 2,
+                "posting_date": add_days(nowdate(), -5),
+                "remarks": "Initial seed stock"
+            })
+            doc.insert()
+            doc.submit()
+    print("Created Lab Stock Entries.")
+
+    # 14. RD Documents (Phase 2)
+    docs = [
+        {"id": "SOP-QC-001", "title": "Standard Operating Procedure for HPLC Operation", "type": "SOP"},
+        {"id": "PROT-RES-005", "title": "Protocol for HER2 Binding Assay", "type": "Protocol"},
+        {"id": "METH-VAL-010", "title": "Validation of Purity Method for CPD-001", "type": "Method"}
+    ]
+    for d in docs:
+        if not frappe.db.exists("RD Document", d["id"]):
+            doc = frappe.get_doc({
+                "doctype": "RD Document",
+                "document_id": d["id"],
+                "document_title": d["title"],
+                "document_type": d["type"],
+                "version": "1.0",
+                "status": "Approved",
+                "effective_date": add_days(nowdate(), -30),
+                "review_period": 24
+            })
+            doc.insert()
+            doc.submit()
+    print("Created RD Documents.")
+
+    # 15. Lab Samples (Phase 2)
+    samples = [
+        {"name": "Initial Batch Sample", "proj": "PRJ-ONC-001", "type": "Finished Product", "batch": "BMR-2024-001"},
+        {"name": "Stability 3M Sample", "proj": "PRJ-ONC-001", "type": "Stability Sample", "batch": "BMR-2024-001"},
+        {"name": "Clinical Vials Phase I", "proj": "PRJ-IMM-004", "type": "Clinical Sample", "batch": "BMR-2024-002"}
+    ]
+    for s in samples:
+        if not frappe.db.exists("Lab Sample", {"sample_name": s["name"]}):
+            frappe.get_doc({
+                "doctype": "Lab Sample",
+                "sample_name": s["name"],
+                "project": s["proj"],
+                "batch": s["batch"],
+                "sample_type": s["type"],
+                "status": "Active",
+                "collection_date": nowdate(),
+                "quantity": 10,
+                "uom": "Vials"
+            }).insert()
+    print("Created Lab Samples.")
 
     frappe.db.commit()
     print("Demo data creation completed successfully.")
