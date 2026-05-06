@@ -1,0 +1,26 @@
+{
+  "name": "Lab Item",
+  "module": "pharma_rd",
+  "doctype": "DocType",
+  "autoname": "field:item_code",
+  "title_field": "item_name",
+  "fields": [
+    {"fieldname": "item_code",    "fieldtype": "Data",    "label": "Item Code",        "reqd": 1, "unique": 1, "in_list_view": 1},
+    {"fieldname": "item_name",    "fieldtype": "Data",    "label": "Item Name",        "reqd": 1, "in_list_view": 1},
+    {"fieldname": "item_group",   "fieldtype": "Select",  "label": "Item Group",
+      "options": "Reagent\nChemical\nSolvent\nExcipient\nGlassware\nConsumable\nOther",
+      "reqd": 1, "in_list_view": 1},
+    {"fieldname": "uom",          "fieldtype": "Data",    "label": "UOM",              "reqd": 1, "default": "Nos"},
+    {"fieldname": "cas_number",   "fieldtype": "Data",    "label": "CAS Number"},
+    {"fieldname": "hazard_class", "fieldtype": "Select",  "label": "Hazard Class",
+      "options": "\nFlammable\nOxidizer\nCorrosive\nToxic\nIrritant\nBiohazard\nNon-Hazardous"},
+    {"fieldname": "storage_req",  "fieldtype": "Small Text","label": "Storage Requirements"},
+    {"fieldname": "min_stock",    "fieldtype": "Float",   "label": "Minimum Stock Level"},
+    {"fieldname": "current_stock","fieldtype": "Float",   "label": "Current Stock",    "read_only": 1, "in_list_view": 1},
+    {"fieldname": "description",  "fieldtype": "Text Editor","label": "Description"}
+  ],
+  "permissions": [
+    {"role": "Pharma Admin", "read": 1, "write": 1, "create": 1, "delete": 1},
+    {"role": "Lab Manager",  "read": 1, "write": 1, "create": 1}
+  ]
+}

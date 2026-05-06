@@ -1,30 +1,16 @@
 import frappe
-from frappe import _
 from frappe.model.document import Document
-from frappe.utils import add_days, today
-
+from frappe.utils import now_datetime
 
 class BatchManufacturingRecord(Document):
-
-    def before_save(self):
-        if not self.batch_no:
-            count = frappe.db.count("Batch Manufacturing Record") + 1
-            self.batch_no = f"BMR-{count:06d}"
-
-    def validate(self):
-        self.validate_expiry()
-
-    def validate_expiry(self):
-        if self.expiry_date and self.manufacture_date:
-            from frappe.utils import getdate
-            if getdate(self.expiry_date) <= getdate(self.manufacture_date):
-                frappe.throw(_("Expiry Date must be after Manufacture Date"))
-
     def on_submit(self):
-        self.batch_status = "Pending QC"
-        frappe.db.set_value(self.doctype, self.name, "batch_status", "Pending QC")
+        self.log_signature("Submitted")
 
-
-def on_submit(doc, method=None):
-    doc.batch_status = "Pending QC"
-    doc.save()
+    def log_signature(self, action):
+        self.append("signatures", {
+            "user": frappe.session.user,
+            "timestamp": now_datetime(),
+            "action": action,
+            "hash": frappe.generate_hash(length=32)
+        })
+        self.db_update_all()

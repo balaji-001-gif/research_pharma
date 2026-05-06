@@ -33,6 +33,8 @@
       "options": "\nPass\nFail", "in_list_view": 1},
     {"fieldname": "oos_reference",   "fieldtype": "Data",    "label": "OOS Reference (if applicable)"},
     {"fieldname": "remarks",         "fieldtype": "Text Editor","label": "Remarks"},
+    {"fieldname": "section_audit",   "fieldtype": "Section Break", "label": "Audit Trail & Electronic Signatures"},
+    {"fieldname": "signatures",      "fieldtype": "Table", "label": "Electronic Signatures", "options": "Electronic Signature Log", "read_only": 1},
     {"fieldname": "amended_from",    "fieldtype": "Link",    "label": "Amended From",       "options": "QC Test", "read_only": 1, "print_hide": 1}
   ],
   "permissions": [

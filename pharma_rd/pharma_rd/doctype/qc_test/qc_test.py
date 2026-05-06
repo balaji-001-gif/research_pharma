@@ -27,8 +27,18 @@ class QCTest(Document):
             )
 
     def on_submit(self):
+        self.log_signature("Submitted")
         if self.batch_no:
             self.update_batch_qc_status()
+
+    def log_signature(self, action):
+        self.append("signatures", {
+            "user": frappe.session.user,
+            "timestamp": now_datetime(),
+            "action": action,
+            "hash": frappe.generate_hash(length=32)
+        })
+        self.db_update_all()
 
     def update_batch_qc_status(self):
         batch = frappe.get_doc("Batch Manufacturing Record", self.batch_no)
