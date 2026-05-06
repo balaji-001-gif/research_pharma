@@ -24,10 +24,10 @@ def create_demo_data():
     targets = [
         {"name": "HER2", "class": "Kinase", "uniprot": "P04626"},
         {"name": "EGFR", "class": "Kinase", "uniprot": "P00533"},
-        {"name": "PD-L1", "class": "Immune Checkpoint", "uniprot": "Q9NZQ7"},
-        {"name": "ACE2", "class": "Enzyme", "uniprot": "Q9BYF1"},
-        {"name": "TNF-alpha", "class": "Cytokine", "uniprot": "P01375"},
-        {"name": "KRAS", "class": "GTPase", "uniprot": "P01116"}
+        {"name": "PD-L1", "class": "Other", "uniprot": "Q9NZQ7"},
+        {"name": "ACE2", "class": "Other", "uniprot": "Q9BYF1"},
+        {"name": "TNF-alpha", "class": "Other", "uniprot": "P01375"},
+        {"name": "KRAS", "class": "Other", "uniprot": "P01116"}
     ]
     for t in targets:
         if not frappe.db.exists("Biological Target", t["name"]):
