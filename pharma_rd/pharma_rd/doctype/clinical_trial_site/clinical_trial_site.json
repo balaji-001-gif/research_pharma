@@ -1,0 +1,16 @@
+{
+  "name": "Clinical Trial Site",
+  "module": "pharma_rd",
+  "doctype": "DocType",
+  "istable": 1,
+  "fields": [
+    {"fieldname": "site_name",       "fieldtype": "Data",    "label": "Site Name",       "reqd": 1, "in_list_view": 1},
+    {"fieldname": "site_code",       "fieldtype": "Data",    "label": "Site Code",       "in_list_view": 1},
+    {"fieldname": "country",         "fieldtype": "Link",    "label": "Country",         "options": "Country", "in_list_view": 1},
+    {"fieldname": "pi_name",         "fieldtype": "Data",    "label": "Site PI",         "in_list_view": 1},
+    {"fieldname": "target_patients", "fieldtype": "Int",     "label": "Target Patients"},
+    {"fieldname": "enrolled",        "fieldtype": "Int",     "label": "Enrolled"},
+    {"fieldname": "site_status",     "fieldtype": "Select",  "label": "Status",
+      "options": "Not Initiated\nInitiated\nEnrolling\nEnrollment Complete\nClosed\nTerminated", "in_list_view": 1}
+  ]
+}

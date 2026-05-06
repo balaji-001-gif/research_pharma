@@ -1,0 +1,38 @@
+{
+  "name": "Lab Equipment",
+  "module": "pharma_rd",
+  "doctype": "DocType",
+  "track_changes": 1,
+  "title_field": "equipment_name",
+  "fields": [
+    {"fieldname": "equipment_id",   "fieldtype": "Data",    "label": "Equipment ID",     "reqd": 1, "unique": 1, "in_list_view": 1},
+    {"fieldname": "equipment_name", "fieldtype": "Data",    "label": "Equipment Name",   "reqd": 1, "in_list_view": 1},
+    {"fieldname": "equipment_type", "fieldtype": "Select",  "label": "Type",
+      "options": "Analytical\nSynthesis\nBiological\nSafety\nStorage\nComputing\nOther", "in_list_view": 1},
+    {"fieldname": "col1",           "fieldtype": "Column Break"},
+    {"fieldname": "make",           "fieldtype": "Data",    "label": "Make / Brand"},
+    {"fieldname": "model",          "fieldtype": "Data",    "label": "Model"},
+    {"fieldname": "serial_number",  "fieldtype": "Data",    "label": "Serial Number"},
+    {"fieldname": "location",       "fieldtype": "Data",    "label": "Location / Lab"},
+    {"fieldname": "status",         "fieldtype": "Select",  "label": "Status",
+      "options": "Operational\nUnder Maintenance\nCalibration Due\nOut of Service\nDecommissioned",
+      "default": "Operational", "in_list_view": 1},
+    {"fieldname": "section_calib",  "fieldtype": "Section Break", "label": "Calibration & Qualification"},
+    {"fieldname": "last_calibration","fieldtype": "Date",   "label": "Last Calibration Date"},
+    {"fieldname": "calibration_due", "fieldtype": "Date",   "label": "Calibration Due Date"},
+    {"fieldname": "calibration_frequency","fieldtype": "Select","label": "Calibration Frequency",
+      "options": "Monthly\nQuarterly\nBi-annual\nAnnual\nAs Needed"},
+    {"fieldname": "col2",           "fieldtype": "Column Break"},
+    {"fieldname": "qualification_status","fieldtype": "Select","label": "Qualification Status",
+      "options": "Not Required\nIQ Complete\nOQ Complete\nPQ Complete\nRequalification Required"},
+    {"fieldname": "responsible_person","fieldtype": "Link", "label": "Responsible Person","options": "User"},
+    {"fieldname": "sop_reference",  "fieldtype": "Data",    "label": "SOP Reference"},
+    {"fieldname": "purchase_date",  "fieldtype": "Date",    "label": "Purchase Date"},
+    {"fieldname": "warranty_expiry","fieldtype": "Date",    "label": "Warranty Expiry"}
+  ],
+  "permissions": [
+    {"role": "Pharma Admin", "read": 1, "write": 1, "create": 1, "delete": 1},
+    {"role": "Lab Manager",  "read": 1, "write": 1, "create": 1},
+    {"role": "QC Analyst",   "read": 1}
+  ]
+}

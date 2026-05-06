@@ -1,0 +1,42 @@
+{
+  "name": "Batch Manufacturing Record",
+  "module": "pharma_rd",
+  "doctype": "DocType",
+  "is_submittable": 1,
+  "track_changes": 1,
+  "title_field": "batch_no",
+  "fields": [
+    {"fieldname": "section_id",     "fieldtype": "Section Break", "label": "Batch Information"},
+    {"fieldname": "batch_no",       "fieldtype": "Data",    "label": "Batch Number",     "reqd": 1, "unique": 1, "in_list_view": 1},
+    {"fieldname": "drug_candidate", "fieldtype": "Link",    "label": "Drug Candidate",   "options": "Drug Candidate", "reqd": 1, "in_list_view": 1},
+    {"fieldname": "batch_size",     "fieldtype": "Float",   "label": "Batch Size"},
+    {"fieldname": "batch_size_unit","fieldtype": "Select",  "label": "Unit",
+      "options": "g\nmg\nkg\nmL\nL\nunits"},
+    {"fieldname": "col1",           "fieldtype": "Column Break"},
+    {"fieldname": "manufacture_date","fieldtype": "Date",   "label": "Manufacture Date", "reqd": 1},
+    {"fieldname": "expiry_date",    "fieldtype": "Date",    "label": "Expiry Date"},
+    {"fieldname": "batch_type",     "fieldtype": "Select",  "label": "Batch Type",
+      "options": "R&D\nPilot\nScale-Up\nValidation\nCommercial\nClinical"},
+    {"fieldname": "batch_status",   "fieldtype": "Select",  "label": "Batch Status",
+      "options": "Draft\nIn Process\nPending QC\nPassed\nFailed\nQuarantined\nReleased\nRecalled",
+      "default": "Draft", "in_list_view": 1},
+    {"fieldname": "section_mfg",    "fieldtype": "Section Break", "label": "Manufacturing Details"},
+    {"fieldname": "manufacturing_site","fieldtype": "Data", "label": "Manufacturing Site"},
+    {"fieldname": "equipment_used", "fieldtype": "Small Text","label": "Equipment Used"},
+    {"fieldname": "batch_formula",  "fieldtype": "Table",   "label": "Batch Formula",   "options": "BMR Formula Line"},
+    {"fieldname": "section_proc",   "fieldtype": "Section Break", "label": "Process Steps"},
+    {"fieldname": "process_steps",  "fieldtype": "Table",   "label": "Process Steps",   "options": "BMR Process Step"},
+    {"fieldname": "section_qc",     "fieldtype": "Section Break", "label": "QC Summary"},
+    {"fieldname": "qc_status",      "fieldtype": "Select",  "label": "QC Status",
+      "options": "Not Started\nIn Progress\nPassed\nFailed", "default": "Not Started", "read_only": 1},
+    {"fieldname": "release_date",   "fieldtype": "Date",    "label": "Release Date"},
+    {"fieldname": "released_by",    "fieldtype": "Link",    "label": "Released By",     "options": "User"},
+    {"fieldname": "deviation_notes","fieldtype": "Text Editor","label": "Deviations / Remarks"},
+    {"fieldname": "amended_from",   "fieldtype": "Link",    "label": "Amended From",    "options": "Batch Manufacturing Record", "read_only": 1, "print_hide": 1}
+  ],
+  "permissions": [
+    {"role": "Pharma Admin", "read": 1, "write": 1, "create": 1, "delete": 1, "submit": 1, "cancel": 1, "amend": 1},
+    {"role": "Lab Manager",  "read": 1, "write": 1, "create": 1, "submit": 1},
+    {"role": "QC Analyst",   "read": 1, "write": 1}
+  ]
+}

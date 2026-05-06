@@ -1,0 +1,22 @@
+{
+  "name": "Biological Target",
+  "module": "pharma_rd",
+  "doctype": "DocType",
+  "title_field": "target_name",
+  "fields": [
+    {"fieldname": "target_id",    "fieldtype": "Data",    "label": "Target ID",        "reqd": 1, "unique": 1, "in_list_view": 1},
+    {"fieldname": "target_name",  "fieldtype": "Data",    "label": "Target Name",      "reqd": 1, "in_list_view": 1},
+    {"fieldname": "target_class", "fieldtype": "Select",  "label": "Target Class",
+      "options": "GPCR\nKinase\nIon Channel\nNuclear Receptor\nProtease\nTransporter\nEpigenetic\nRNA\nDNA\nOther",
+      "in_list_view": 1},
+    {"fieldname": "uniprot_id",   "fieldtype": "Data",    "label": "UniProt ID"},
+    {"fieldname": "gene_name",    "fieldtype": "Data",    "label": "Gene Name"},
+    {"fieldname": "organism",     "fieldtype": "Data",    "label": "Organism", "default": "Homo sapiens"},
+    {"fieldname": "therapeutic_area","fieldtype": "Link", "label": "Therapeutic Area", "options": "Therapeutic Area"},
+    {"fieldname": "description",  "fieldtype": "Text Editor","label": "Description"}
+  ],
+  "permissions": [
+    {"role": "Pharma Admin",      "read": 1, "write": 1, "create": 1, "delete": 1},
+    {"role": "Pharma Researcher", "read": 1, "write": 1, "create": 1}
+  ]
+}
