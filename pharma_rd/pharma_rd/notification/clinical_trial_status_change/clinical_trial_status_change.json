@@ -11,6 +11,6 @@
   ],
   "subject": "Clinical Trial Status Updated: {{ doc.trial_id }}",
   "message": "<p>Dear {{ user }},</p><p>Clinical Trial <b>{{ doc.trial_id }} - {{ doc.trial_title }}</b> status has been updated.</p><p><b>New Status:</b> {{ doc.status }}</p><p><b>Phase:</b> {{ doc.trial_phase }}</p><p><b>Drug:</b> {{ doc.drug_candidate }}</p><p>Please review the trial record for further details.</p>",
-  "is_standard": 1,
+  "is_standard": 0,
   "module": "pharma_rd"
 }
