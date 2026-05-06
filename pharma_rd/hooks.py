@@ -1,5 +1,5 @@
 app_name = "pharma_rd"
-app_title = "Pharma R&D"
+app_title = "Pharma RD"
 app_publisher = "Your Company"
 app_description = "Research and Pharma Development Application for Frappe v15+"
 app_email = "admin@yourcompany.com"
@@ -40,8 +40,8 @@ scheduler_events = {
 
 # ------ Fixtures -------
 fixtures = [
-    {"dt": "Custom Field",   "filters": [["module", "=", "Pharma R&D"]]},
-    {"dt": "Property Setter","filters": [["module", "=", "Pharma R&D"]]},
+    {"dt": "Custom Field",   "filters": [["module", "=", "Pharma RD"]]},
+    {"dt": "Property Setter","filters": [["module", "=", "Pharma RD"]]},
     {"dt": "Role",           "filters": [["name", "in", [
         "Pharma Researcher", "Clinical Trial Manager",
         "QC Analyst", "Regulatory Affairs Officer",

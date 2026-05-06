@@ -1,6 +1,6 @@
 {
   "name": "Biological Target",
-  "module": "Pharma R&D",
+  "module": "Pharma RD",
   "doctype": "DocType",
   "title_field": "target_name",
   "fields": [
