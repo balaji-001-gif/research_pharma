@@ -190,12 +190,14 @@ def create_demo_data():
             doc = frappe.get_doc({
                 "doctype": "QC Test",
                 "test_id": t["id"],
+                "test_name": f"{t['type']} for {t['batch']}",
                 "batch_no": t["batch"],
                 "test_type": t["type"],
                 "result_value": t["result"],
                 "pass_fail": t["pass"],
                 "analyst": "Administrator",
-                "instrument": "HPLC-01"
+                "instrument": "HPLC-01",
+                "test_date": nowdate()
             })
             doc.insert()
             doc.submit()
@@ -206,10 +208,12 @@ def create_demo_data():
         doc = frappe.get_doc({
             "doctype": "Stability Study",
             "study_id": "STB-001",
+            "drug_candidate": "CPD-001",
             "batch_no": "BMR-2024-001",
             "study_type": "Long-Term",
             "temperature": "25°C",
             "humidity": "60%RH",
+            "start_date": nowdate(),
             "timepoints": [
                 {"timepoint": "Initial", "target_date": nowdate(), "status": "Completed"},
                 {"timepoint": "3 Months", "target_date": add_days(nowdate(), 90), "status": "Scheduled"},
