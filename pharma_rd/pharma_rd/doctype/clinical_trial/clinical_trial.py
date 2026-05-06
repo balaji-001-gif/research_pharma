@@ -39,12 +39,11 @@ class ClinicalTrial(Document):
             pluck="parent",
         )
         for officer in regulatory_officers:
-            frappe.sendmail(
-                recipients=[officer],
-                subject=f"Clinical Trial Submitted: {self.trial_id}",
-                message=f"Clinical Trial <b>{self.trial_title}</b> has been submitted for review.",
-            )
-
-
-def on_submit(doc, method=None):
-    doc.notify_regulatory()
+            try:
+                frappe.sendmail(
+                    recipients=[officer],
+                    subject=f"Clinical Trial Submitted: {self.trial_id}",
+                    message=f"Clinical Trial <b>{self.trial_title}</b> has been submitted for review.",
+                )
+            except frappe.OutgoingEmailError:
+                frappe.msgprint(_("Regulatory notification skipped: Outgoing Email Account not configured."))
