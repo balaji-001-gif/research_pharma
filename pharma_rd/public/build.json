@@ -1,8 +1,8 @@
 {
     "pharma_rd.js": [
-        "public/js/pharma_rd.js"
+        "js/pharma_rd.js"
     ],
     "pharma_rd.css": [
-        "public/css/pharma_rd.css"
+        "css/pharma_rd.css"
     ]
 }
