@@ -297,6 +297,7 @@ def create_demo_data():
                 "entry_type": "Stock In",
                 "quantity": i["min"] * 2,
                 "posting_date": add_days(nowdate(), -5),
+                "performed_by": "Administrator",
                 "remarks": "Initial seed stock"
             })
             doc.insert()

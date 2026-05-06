@@ -12,7 +12,7 @@
     {"fieldname": "batch_no",      "fieldtype": "Data",    "label": "Manufacturer Batch No"},
     {"fieldname": "expiry_date",   "fieldtype": "Date",    "label": "Expiry Date",      "in_list_view": 1},
     {"fieldname": "posting_date", "fieldtype": "Date",    "label": "Posting Date",     "default": "Today", "reqd": 1},
-    {"fieldname": "performed_by",  "fieldtype": "Link",    "label": "Performed By",     "options": "User", "default": "Session User"},
+    {"fieldname": "performed_by",  "fieldtype": "Link",    "label": "Performed By",     "options": "User", "default": "Administrator"},
     {"fieldname": "project",      "fieldtype": "Link",    "label": "Link to Project",  "options": "Research Project"},
     {"fieldname": "remarks",      "fieldtype": "Small Text","label": "Remarks"}
   ],
