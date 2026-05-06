@@ -1,74 +1,329 @@
 {
   "doctype": "Workspace",
   "name": "pharma_rd",
-  "label": "pharma_rd",
+  "label": "Pharma R&D",
+  "title": "Pharma R&D",
+  "icon": "fa fa-flask",
   "module": "pharma_rd",
-  "icon": "lab",
-  "is_standard": 1,
   "public": 1,
-  "shortcuts": [
-    {"label": "Research Project",       "link_to": "Research Project",       "type": "DocType", "icon": "project"},
-    {"label": "Drug Candidate",         "link_to": "Drug Candidate",         "type": "DocType", "icon": "drug"},
-    {"label": "Clinical Trial",         "link_to": "Clinical Trial",         "type": "DocType", "icon": "healthcare"},
-    {"label": "Batch Mfg Record",       "link_to": "Batch Manufacturing Record","type": "DocType", "icon": "manufacturing"},
-    {"label": "QC Test",               "link_to": "QC Test",                "type": "DocType", "icon": "quality"},
-    {"label": "Stability Study",        "link_to": "Stability Study",        "type": "DocType", "icon": "science"},
-    {"label": "Regulatory Submission",  "link_to": "Regulatory Submission",  "type": "DocType", "icon": "government"},
-    {"label": "Lab Equipment",          "link_to": "Lab Equipment",          "type": "DocType", "icon": "equipment"},
-    {"label": "Project Summary Report", "link_to": "Research Project Summary","type": "Report",  "icon": "bar-chart"},
-    {"label": "Clinical Trial Status",  "link_to": "Clinical Trial Status",  "type": "Report",  "icon": "bar-chart"}
+  "is_standard": 1,
+  "is_hidden": 0,
+  "is_default": 0,
+  "developer_mode_only": 0,
+  "disable_user_customization": 0,
+  "hide_custom": 0,
+  "restrict_to_domain": "",
+  "for_user": "",
+  "sequence_id": 22,
+  "creation": "2024-01-01 00:00:00.000000",
+  "modified": "2024-01-01 00:00:00.000000",
+  "modified_by": "Administrator",
+  "owner": "Administrator",
+  "docstatus": 0,
+  "idx": 0,
+
+  "charts": [
+    {
+      "chart_name": "Active Trials This Month",
+      "label": "Active Trials This Month"
+    },
+    {
+      "chart_name": "R&D Expenditure Trend",
+      "label": "R&D Expenditure Trend"
+    },
+    {
+      "chart_name": "Drug Candidate Pipeline Status",
+      "label": "Drug Candidate Pipeline Status"
+    }
   ],
-  "content": "[{\"type\":\"onboarding\",\"data\":{\"onboarding_name\":\"pharma_rd\",\"col\":12}},{\"type\":\"spacer\",\"data\":{\"col\":12}},{\"type\":\"header\",\"data\":{\"text\":\"<h2>Research Management</h2>\",\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Research\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Clinical\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Quality\",\"col\":4}},{\"type\":\"header\",\"data\":{\"text\":\"<h2>Operations</h2>\",\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Manufacturing\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Regulatory\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Masters\",\"col\":4}},{\"type\":\"header\",\"data\":{\"text\":\"<h2>Reports\",\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Analytics\",\"col\":6}}]",
+
+  "content": "[{\"id\":\"cb-research\",\"type\":\"card\",\"data\":{\"card_name\":\"Research\",\"col\":12}},{\"id\":\"cb-clinical\",\"type\":\"card\",\"data\":{\"card_name\":\"Clinical\",\"col\":12}},{\"id\":\"cb-quality\",\"type\":\"card\",\"data\":{\"card_name\":\"Quality\",\"col\":12}},{\"id\":\"cb-manufacturing\",\"type\":\"card\",\"data\":{\"card_name\":\"Manufacturing\",\"col\":12}},{\"id\":\"cb-regulatory\",\"type\":\"card\",\"data\":{\"card_name\":\"Regulatory\",\"col\":12}},{\"id\":\"cb-masters\",\"type\":\"card\",\"data\":{\"card_name\":\"Masters\",\"col\":12}},{\"id\":\"cb-analytics\",\"type\":\"card\",\"data\":{\"card_name\":\"Analytics\",\"col\":12}}]",
+
+  "shortcuts": [
+    {
+      "color": "Blue",
+      "format": "{} Active",
+      "label": "Active Projects",
+      "link_to": "Research Project",
+      "stats_filter": "{\"status\": \"Active\"}",
+      "type": "DocType"
+    },
+    {
+      "color": "Green",
+      "format": "{} Today",
+      "label": "Today's QC Tests",
+      "link_to": "QC Test",
+      "stats_filter": "{\"test_date\": \"today\", \"status\": [\"in\", [\"Open\", \"In Progress\"]]}",
+      "type": "DocType"
+    },
+    {
+      "color": "Purple",
+      "format": "{} Running",
+      "label": "Active Clinical Trials",
+      "link_to": "Clinical Trial",
+      "stats_filter": "{\"status\": \"Running\"}",
+      "type": "DocType"
+    },
+    {
+      "color": "Orange",
+      "format": "{} In Progress",
+      "label": "Batch Records Open",
+      "link_to": "Batch Manufacturing Record",
+      "stats_filter": "{\"status\": \"In Progress\"}",
+      "type": "DocType"
+    },
+    {
+      "color": "Red",
+      "format": "{} Pending",
+      "label": "Pending Submissions",
+      "link_to": "Regulatory Submission",
+      "stats_filter": "{\"status\": \"Pending\"}",
+      "type": "DocType"
+    },
+    {
+      "color": "Teal",
+      "format": "{} Active",
+      "label": "Drug Candidates",
+      "link_to": "Drug Candidate",
+      "stats_filter": "{\"status\": \"Active\"}",
+      "type": "DocType"
+    },
+    {
+      "color": "Cyan",
+      "format": "{} Studies",
+      "label": "Stability Studies",
+      "link_to": "Stability Study",
+      "stats_filter": "{\"status\": \"Active\"}",
+      "type": "DocType"
+    },
+    {
+      "color": "Yellow",
+      "label": "Lab Equipment",
+      "link_to": "Lab Equipment",
+      "type": "DocType"
+    }
+  ],
+
   "links": [
+
     {
+      "hidden": 0, "idx": 1,
+      "is_query_report": 0,
       "label": "Research",
-      "type": "Card Break",
-      "hidden": 0
+      "link_count": 0,
+      "onboard": 1,
+      "title": "Research",
+      "type": "Card Break"
     },
-    {"label": "Research Project",    "link_to": "Research Project",    "type": "DocType", "onboard": 1},
-    {"label": "Drug Candidate",      "link_to": "Drug Candidate",      "type": "DocType", "onboard": 1},
-    {"label": "Biological Target",   "link_to": "Biological Target",   "type": "DocType"},
-    {"label": "Therapeutic Area",    "link_to": "Therapeutic Area",    "type": "DocType"},
     {
+      "dependencies": "", "hidden": 0, "idx": 2,
+      "is_query_report": 0,
+      "label": "Research Project",
+      "link_count": 0,
+      "link_to": "Research Project",
+      "link_type": "DocType",
+      "onboard": 1,
+      "type": "Link"
+    },
+    {
+      "dependencies": "", "hidden": 0, "idx": 3,
+      "is_query_report": 0,
+      "label": "Drug Candidate",
+      "link_count": 0,
+      "link_to": "Drug Candidate",
+      "link_type": "DocType",
+      "onboard": 1,
+      "type": "Link"
+    },
+    {
+      "dependencies": "", "hidden": 0, "idx": 4,
+      "is_query_report": 0,
+      "label": "Biological Target",
+      "link_count": 0,
+      "link_to": "Biological Target",
+      "link_type": "DocType",
+      "onboard": 0,
+      "type": "Link"
+    },
+    {
+      "dependencies": "", "hidden": 0, "idx": 5,
+      "is_query_report": 0,
+      "label": "Therapeutic Area",
+      "link_count": 0,
+      "link_to": "Therapeutic Area",
+      "link_type": "DocType",
+      "onboard": 0,
+      "type": "Link"
+    },
+
+    {
+      "hidden": 0, "idx": 6,
+      "is_query_report": 0,
       "label": "Clinical",
-      "type": "Card Break",
-      "hidden": 0
+      "link_count": 0,
+      "onboard": 1,
+      "title": "Clinical",
+      "type": "Card Break"
     },
-    {"label": "Clinical Trial",      "link_to": "Clinical Trial",      "type": "DocType", "onboard": 1},
     {
+      "dependencies": "", "hidden": 0, "idx": 7,
+      "is_query_report": 0,
+      "label": "Clinical Trial",
+      "link_count": 0,
+      "link_to": "Clinical Trial",
+      "link_type": "DocType",
+      "onboard": 1,
+      "type": "Link"
+    },
+
+    {
+      "hidden": 0, "idx": 8,
+      "is_query_report": 0,
       "label": "Quality",
-      "type": "Card Break",
-      "hidden": 0
+      "link_count": 0,
+      "onboard": 1,
+      "title": "Quality",
+      "type": "Card Break"
     },
-    {"label": "QC Test",             "link_to": "QC Test",             "type": "DocType", "onboard": 1},
-    {"label": "Stability Study",     "link_to": "Stability Study",     "type": "DocType"},
     {
+      "dependencies": "", "hidden": 0, "idx": 9,
+      "is_query_report": 0,
+      "label": "QC Test",
+      "link_count": 0,
+      "link_to": "QC Test",
+      "link_type": "DocType",
+      "onboard": 1,
+      "type": "Link"
+    },
+    {
+      "dependencies": "", "hidden": 0, "idx": 10,
+      "is_query_report": 0,
+      "label": "Stability Study",
+      "link_count": 0,
+      "link_to": "Stability Study",
+      "link_type": "DocType",
+      "onboard": 0,
+      "type": "Link"
+    },
+
+    {
+      "hidden": 0, "idx": 11,
+      "is_query_report": 0,
       "label": "Manufacturing",
-      "type": "Card Break",
-      "hidden": 0
+      "link_count": 0,
+      "onboard": 0,
+      "title": "Manufacturing",
+      "type": "Card Break"
     },
-    {"label": "Batch Manufacturing Record", "link_to": "Batch Manufacturing Record", "type": "DocType", "onboard": 1},
-    {"label": "Lab Equipment",       "link_to": "Lab Equipment",       "type": "DocType"},
     {
+      "dependencies": "", "hidden": 0, "idx": 12,
+      "is_query_report": 0,
+      "label": "Batch Manufacturing Record",
+      "link_count": 0,
+      "link_to": "Batch Manufacturing Record",
+      "link_type": "DocType",
+      "onboard": 1,
+      "type": "Link"
+    },
+    {
+      "dependencies": "", "hidden": 0, "idx": 13,
+      "is_query_report": 0,
+      "label": "Lab Equipment",
+      "link_count": 0,
+      "link_to": "Lab Equipment",
+      "link_type": "DocType",
+      "onboard": 0,
+      "type": "Link"
+    },
+
+    {
+      "hidden": 0, "idx": 14,
+      "is_query_report": 0,
       "label": "Regulatory",
-      "type": "Card Break",
-      "hidden": 0
+      "link_count": 0,
+      "onboard": 0,
+      "title": "Regulatory",
+      "type": "Card Break"
     },
-    {"label": "Regulatory Submission","link_to": "Regulatory Submission","type": "DocType", "onboard": 1},
     {
+      "dependencies": "", "hidden": 0, "idx": 15,
+      "is_query_report": 0,
+      "label": "Regulatory Submission",
+      "link_count": 0,
+      "link_to": "Regulatory Submission",
+      "link_type": "DocType",
+      "onboard": 1,
+      "type": "Link"
+    },
+
+    {
+      "hidden": 0, "idx": 16,
+      "is_query_report": 0,
       "label": "Masters",
-      "type": "Card Break",
-      "hidden": 0
+      "link_count": 0,
+      "onboard": 0,
+      "title": "Masters",
+      "type": "Card Break"
     },
-    {"label": "Therapeutic Area",    "link_to": "Therapeutic Area",    "type": "DocType"},
-    {"label": "Biological Target",   "link_to": "Biological Target",   "type": "DocType"},
     {
-      "label": "Analytics",
-      "type": "Card Break",
-      "hidden": 0
+      "dependencies": "", "hidden": 0, "idx": 17,
+      "is_query_report": 0,
+      "label": "Therapeutic Area",
+      "link_count": 0,
+      "link_to": "Therapeutic Area",
+      "link_type": "DocType",
+      "onboard": 0,
+      "type": "Link"
     },
-    {"label": "Research Project Summary",   "link_to": "Research Project Summary",   "type": "Report"},
-    {"label": "Clinical Trial Status",      "link_to": "Clinical Trial Status",      "type": "Report"},
-    {"label": "QC Test Results Summary",    "link_to": "QC Test Results Summary",    "type": "Report"}
+    {
+      "dependencies": "", "hidden": 0, "idx": 18,
+      "is_query_report": 0,
+      "label": "Biological Target",
+      "link_count": 0,
+      "link_to": "Biological Target",
+      "link_type": "DocType",
+      "onboard": 0,
+      "type": "Link"
+    },
+
+    {
+      "hidden": 0, "idx": 19,
+      "is_query_report": 0,
+      "label": "Analytics",
+      "link_count": 0,
+      "onboard": 0,
+      "title": "Analytics",
+      "type": "Card Break"
+    },
+    {
+      "dependencies": "", "hidden": 0, "idx": 20,
+      "is_query_report": 1,
+      "label": "Research Project Summary",
+      "link_count": 0,
+      "link_to": "Research Project Summary",
+      "link_type": "Report",
+      "onboard": 0,
+      "type": "Link"
+    },
+    {
+      "dependencies": "", "hidden": 0, "idx": 21,
+      "is_query_report": 1,
+      "label": "Clinical Trial Status",
+      "link_count": 0,
+      "link_to": "Clinical Trial Status",
+      "link_type": "Report",
+      "onboard": 0,
+      "type": "Link"
+    },
+    {
+      "dependencies": "", "hidden": 0, "idx": 22,
+      "is_query_report": 1,
+      "label": "QC Test Results Summary",
+      "link_count": 0,
+      "link_to": "QC Test Results Summary",
+      "link_type": "Report",
+      "onboard": 0,
+      "type": "Link"
+    }
   ]
 }
