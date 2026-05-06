@@ -1,0 +1,16 @@
+{
+  "name": "Regulatory Submission Approved",
+  "document_type": "Regulatory Submission",
+  "event": "Change",
+  "value_changed": "status",
+  "condition": "doc.status == 'Approved'",
+  "send_to_all_assignees": 1,
+  "recipients": [
+    {"receiver_by_role": "Regulatory Affairs Officer"},
+    {"receiver_by_role": "Pharma Admin"}
+  ],
+  "subject": "🎉 Regulatory Approval Received: {{ doc.submission_id }}",
+  "message": "<p>Dear {{ user }},</p><p style='color:green'><b>CONGRATULATIONS! Regulatory Approval has been received.</b></p><table border='1' cellpadding='5'><tr><td><b>Submission ID</b></td><td>{{ doc.submission_id }}</td></tr><tr><td><b>Type</b></td><td>{{ doc.submission_type }}</td></tr><tr><td><b>Agency</b></td><td>{{ doc.regulatory_agency }}</td></tr><tr><td><b>Drug</b></td><td>{{ doc.drug_candidate }}</td></tr><tr><td><b>Approval Number</b></td><td>{{ doc.approval_number }}</td></tr><tr><td><b>Decision Date</b></td><td>{{ doc.decision_date }}</td></tr></table><p>Please update all relevant records and initiate post-approval activities.</p>",
+  "is_standard": 1,
+  "module": "Pharma R&D"
+}

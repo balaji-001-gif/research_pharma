@@ -1,0 +1,8 @@
+[
+  {"doctype": "Role", "name": "Pharma Admin",              "desk_access": 1},
+  {"doctype": "Role", "name": "Pharma Researcher",         "desk_access": 1},
+  {"doctype": "Role", "name": "Clinical Trial Manager",    "desk_access": 1},
+  {"doctype": "Role", "name": "QC Analyst",                "desk_access": 1},
+  {"doctype": "Role", "name": "Regulatory Affairs Officer","desk_access": 1},
+  {"doctype": "Role", "name": "Lab Manager",               "desk_access": 1}
+]

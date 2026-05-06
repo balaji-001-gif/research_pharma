@@ -1,0 +1,33 @@
+/* Pharma R&D — Custom Stylesheet */
+
+/* ── Status Badge Colours ─────────────────────────────────────────────────── */
+.indicator-pill.active,
+.badge-status-active   { background-color: #28a745; color: #fff; }
+.indicator-pill.on-hold,
+.badge-status-on-hold  { background-color: #ffc107; color: #212529; }
+.indicator-pill.failed,
+.badge-status-failed   { background-color: #dc3545; color: #fff; }
+.indicator-pill.passed,
+.badge-status-passed   { background-color: #28a745; color: #fff; }
+.indicator-pill.pending,
+.badge-status-pending  { background-color: #6c757d; color: #fff; }
+.indicator-pill.completed,
+.badge-status-completed { background-color: #007bff; color: #fff; }
+
+/* ── Lipinski violations highlight ──────────────────────────────────────── */
+.lipinski-violation { background-color: #fff3cd; border-left: 4px solid #ffc107; padding: 4px 8px; }
+
+/* ── Research Project card ──────────────────────────────────────────────── */
+.pharma-project-card { border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,.1); padding: 16px; margin-bottom: 16px; }
+.pharma-project-card .phase-badge { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; background: #e8f4fd; color: #007bff; }
+
+/* ── Timeline milestone bar ─────────────────────────────────────────────── */
+.milestone-bar { display: flex; align-items: center; gap: 8px; margin: 4px 0; }
+.milestone-bar .milestone-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+.milestone-bar .milestone-dot.completed { background: #28a745; }
+.milestone-bar .milestone-dot.pending   { background: #adb5bd; }
+.milestone-bar .milestone-dot.delayed   { background: #dc3545; }
+
+/* ── QC Dashboard panel ──────────────────────────────────────────────────── */
+.qc-pass  { color: #28a745; font-weight: 700; }
+.qc-fail  { color: #dc3545; font-weight: 700; }

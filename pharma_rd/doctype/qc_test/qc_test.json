@@ -1,0 +1,42 @@
+{
+  "name": "QC Test",
+  "module": "Pharma R&D",
+  "doctype": "DocType",
+  "is_submittable": 1,
+  "track_changes": 1,
+  "title_field": "test_name",
+  "fields": [
+    {"fieldname": "section_id",      "fieldtype": "Section Break", "label": "Test Identification"},
+    {"fieldname": "test_name",       "fieldtype": "Data",    "label": "Test Name",          "reqd": 1, "in_list_view": 1},
+    {"fieldname": "test_id",         "fieldtype": "Data",    "label": "Test ID",            "unique": 1, "read_only": 1},
+    {"fieldname": "batch_no",        "fieldtype": "Link",    "label": "Batch",              "options": "Batch Manufacturing Record", "in_list_view": 1},
+    {"fieldname": "col1",            "fieldtype": "Column Break"},
+    {"fieldname": "test_type",       "fieldtype": "Select",  "label": "Test Type",
+      "options": "Identity\nAssay\nPurity\nSterility\nPyrogenicity\nParticulate Matter\nDissolution\nContent Uniformity\nMoisture\nResidue on Ignition\nHeavy Metals\nMicrobial Limits\nOther",
+      "reqd": 1, "in_list_view": 1},
+    {"fieldname": "status",          "fieldtype": "Select",  "label": "Status",
+      "options": "Pending\nIn Progress\nPassed\nFailed\nInvalidated", "default": "Pending", "in_list_view": 1},
+    {"fieldname": "section_method",  "fieldtype": "Section Break", "label": "Test Method"},
+    {"fieldname": "test_method",     "fieldtype": "Data",    "label": "Test Method / SOP Reference"},
+    {"fieldname": "instrument",      "fieldtype": "Link",    "label": "Instrument",         "options": "Lab Equipment"},
+    {"fieldname": "analyst",         "fieldtype": "Link",    "label": "Analyst",            "options": "User", "reqd": 1},
+    {"fieldname": "test_date",       "fieldtype": "Datetime","label": "Test Date",          "reqd": 1},
+    {"fieldname": "col2",            "fieldtype": "Column Break"},
+    {"fieldname": "reviewer",        "fieldtype": "Link",    "label": "Reviewed By",        "options": "User"},
+    {"fieldname": "review_date",     "fieldtype": "Datetime","label": "Review Date"},
+    {"fieldname": "section_results", "fieldtype": "Section Break", "label": "Results"},
+    {"fieldname": "specification",   "fieldtype": "Small Text","label": "Specification"},
+    {"fieldname": "result_value",    "fieldtype": "Data",    "label": "Result Value",       "in_list_view": 1},
+    {"fieldname": "unit",            "fieldtype": "Data",    "label": "Unit"},
+    {"fieldname": "pass_fail",       "fieldtype": "Select",  "label": "Pass / Fail",
+      "options": "\nPass\nFail", "in_list_view": 1},
+    {"fieldname": "oos_reference",   "fieldtype": "Data",    "label": "OOS Reference (if applicable)"},
+    {"fieldname": "remarks",         "fieldtype": "Text Editor","label": "Remarks"},
+    {"fieldname": "amended_from",    "fieldtype": "Link",    "label": "Amended From",       "options": "QC Test", "read_only": 1, "print_hide": 1}
+  ],
+  "permissions": [
+    {"role": "Pharma Admin",  "read": 1, "write": 1, "create": 1, "delete": 1, "submit": 1, "cancel": 1, "amend": 1},
+    {"role": "QC Analyst",    "read": 1, "write": 1, "create": 1, "submit": 1},
+    {"role": "Lab Manager",   "read": 1, "write": 1, "submit": 1, "cancel": 1, "amend": 1}
+  ]
+}

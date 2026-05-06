@@ -1,0 +1,12 @@
+[
+  {"doctype": "Therapeutic Area", "area_name": "Oncology",          "description": "Cancer and tumor treatments"},
+  {"doctype": "Therapeutic Area", "area_name": "Cardiology",        "description": "Heart and cardiovascular diseases"},
+  {"doctype": "Therapeutic Area", "area_name": "Neurology",         "description": "Neurological and CNS disorders"},
+  {"doctype": "Therapeutic Area", "area_name": "Immunology",        "description": "Immune system disorders and autoimmune diseases"},
+  {"doctype": "Therapeutic Area", "area_name": "Infectious Disease","description": "Bacterial, viral and parasitic infections"},
+  {"doctype": "Therapeutic Area", "area_name": "Metabolic Disease", "description": "Diabetes, obesity and metabolic disorders"},
+  {"doctype": "Therapeutic Area", "area_name": "Respiratory",       "description": "Lung and respiratory diseases"},
+  {"doctype": "Therapeutic Area", "area_name": "Rare Disease",      "description": "Orphan diseases and rare conditions"},
+  {"doctype": "Therapeutic Area", "area_name": "Ophthalmology",     "description": "Eye diseases and disorders"},
+  {"doctype": "Therapeutic Area", "area_name": "Dermatology",       "description": "Skin disorders"}
+]

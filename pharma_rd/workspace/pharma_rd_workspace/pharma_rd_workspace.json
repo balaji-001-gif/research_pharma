@@ -1,0 +1,73 @@
+{
+  "name": "Pharma R&D",
+  "label": "Pharma R&D",
+  "module": "Pharma R&D",
+  "icon": "lab",
+  "is_standard": 1,
+  "public": 1,
+  "shortcuts": [
+    {"label": "Research Project",       "link_to": "Research Project",       "type": "DocType", "icon": "project"},
+    {"label": "Drug Candidate",         "link_to": "Drug Candidate",         "type": "DocType", "icon": "drug"},
+    {"label": "Clinical Trial",         "link_to": "Clinical Trial",         "type": "DocType", "icon": "healthcare"},
+    {"label": "Batch Mfg Record",       "link_to": "Batch Manufacturing Record","type": "DocType", "icon": "manufacturing"},
+    {"label": "QC Test",               "link_to": "QC Test",                "type": "DocType", "icon": "quality"},
+    {"label": "Stability Study",        "link_to": "Stability Study",        "type": "DocType", "icon": "science"},
+    {"label": "Regulatory Submission",  "link_to": "Regulatory Submission",  "type": "DocType", "icon": "government"},
+    {"label": "Lab Equipment",          "link_to": "Lab Equipment",          "type": "DocType", "icon": "equipment"},
+    {"label": "Project Summary Report", "link_to": "Research Project Summary","type": "Report",  "icon": "bar-chart"},
+    {"label": "Clinical Trial Status",  "link_to": "Clinical Trial Status",  "type": "Report",  "icon": "bar-chart"}
+  ],
+  "content": "[{\"type\":\"onboarding\",\"data\":{\"onboarding_name\":\"Pharma R&D\",\"col\":12}},{\"type\":\"spacer\",\"data\":{\"col\":12}},{\"type\":\"header\",\"data\":{\"text\":\"<h2>Research Management</h2>\",\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Research\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Clinical\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Quality\",\"col\":4}},{\"type\":\"header\",\"data\":{\"text\":\"<h2>Operations</h2>\",\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Manufacturing\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Regulatory\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Masters\",\"col\":4}},{\"type\":\"header\",\"data\":{\"text\":\"<h2>Reports\",\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Analytics\",\"col\":6}}]",
+  "links": [
+    {
+      "label": "Research",
+      "type": "Card Break",
+      "hidden": 0
+    },
+    {"label": "Research Project",    "link_to": "Research Project",    "type": "DocType", "onboard": 1},
+    {"label": "Drug Candidate",      "link_to": "Drug Candidate",      "type": "DocType", "onboard": 1},
+    {"label": "Biological Target",   "link_to": "Biological Target",   "type": "DocType"},
+    {"label": "Therapeutic Area",    "link_to": "Therapeutic Area",    "type": "DocType"},
+    {
+      "label": "Clinical",
+      "type": "Card Break",
+      "hidden": 0
+    },
+    {"label": "Clinical Trial",      "link_to": "Clinical Trial",      "type": "DocType", "onboard": 1},
+    {
+      "label": "Quality",
+      "type": "Card Break",
+      "hidden": 0
+    },
+    {"label": "QC Test",             "link_to": "QC Test",             "type": "DocType", "onboard": 1},
+    {"label": "Stability Study",     "link_to": "Stability Study",     "type": "DocType"},
+    {
+      "label": "Manufacturing",
+      "type": "Card Break",
+      "hidden": 0
+    },
+    {"label": "Batch Manufacturing Record", "link_to": "Batch Manufacturing Record", "type": "DocType", "onboard": 1},
+    {"label": "Lab Equipment",       "link_to": "Lab Equipment",       "type": "DocType"},
+    {
+      "label": "Regulatory",
+      "type": "Card Break",
+      "hidden": 0
+    },
+    {"label": "Regulatory Submission","link_to": "Regulatory Submission","type": "DocType", "onboard": 1},
+    {
+      "label": "Masters",
+      "type": "Card Break",
+      "hidden": 0
+    },
+    {"label": "Therapeutic Area",    "link_to": "Therapeutic Area",    "type": "DocType"},
+    {"label": "Biological Target",   "link_to": "Biological Target",   "type": "DocType"},
+    {
+      "label": "Analytics",
+      "type": "Card Break",
+      "hidden": 0
+    },
+    {"label": "Research Project Summary",   "link_to": "Research Project Summary",   "type": "Report"},
+    {"label": "Clinical Trial Status",      "link_to": "Clinical Trial Status",      "type": "Report"},
+    {"label": "QC Test Results Summary",    "link_to": "QC Test Results Summary",    "type": "Report"}
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "is_standard": "Yes",
+  "name": "Clinical Trial Status",
+  "report_name": "Clinical Trial Status",
+  "report_type": "Script Report",
+  "ref_doctype": "Clinical Trial",
+  "module": "Pharma R&D"
+}

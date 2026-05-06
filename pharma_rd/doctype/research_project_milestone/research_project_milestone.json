@@ -1,0 +1,14 @@
+{
+  "name": "Research Project Milestone",
+  "module": "Pharma R&D",
+  "doctype": "DocType",
+  "istable": 1,
+  "fields": [
+    {"fieldname": "milestone_name", "fieldtype": "Data",   "label": "Milestone",     "reqd": 1, "in_list_view": 1},
+    {"fieldname": "due_date",       "fieldtype": "Date",   "label": "Due Date",      "reqd": 1, "in_list_view": 1},
+    {"fieldname": "status",         "fieldtype": "Select", "label": "Status",
+      "options": "Pending\nIn Progress\nCompleted\nDelayed\nCancelled", "default": "Pending", "in_list_view": 1},
+    {"fieldname": "completion_date","fieldtype": "Date",   "label": "Completion Date"},
+    {"fieldname": "deliverable",    "fieldtype": "Small Text", "label": "Deliverable"}
+  ]
+}

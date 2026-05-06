@@ -1,0 +1,16 @@
+{
+  "name": "Calibration Due Alert",
+  "document_type": "Lab Equipment",
+  "event": "Days Before",
+  "days_in_advance": 14,
+  "date_changed": "calibration_due",
+  "send_to_all_assignees": 0,
+  "condition": "doc.status == 'Operational'",
+  "recipients": [
+    {"receiver_by_role": "Lab Manager"}
+  ],
+  "subject": "Lab Equipment Calibration Due: {{ doc.equipment_name }}",
+  "message": "<p>Dear {{ user }},</p><p>The following equipment calibration is due in 14 days:</p><table border='1' cellpadding='5'><tr><td><b>Equipment</b></td><td>{{ doc.equipment_name }}</td></tr><tr><td><b>Equipment ID</b></td><td>{{ doc.equipment_id }}</td></tr><tr><td><b>Type</b></td><td>{{ doc.equipment_type }}</td></tr><tr><td><b>Calibration Due</b></td><td>{{ doc.calibration_due }}</td></tr><tr><td><b>Location</b></td><td>{{ doc.location }}</td></tr></table><p>Please schedule calibration promptly to maintain compliance.</p>",
+  "is_standard": 1,
+  "module": "Pharma R&D"
+}

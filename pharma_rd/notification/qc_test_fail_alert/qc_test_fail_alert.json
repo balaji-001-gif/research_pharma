@@ -1,0 +1,17 @@
+{
+  "name": "QC Test Failure Alert",
+  "document_type": "QC Test",
+  "event": "Change",
+  "value_changed": "pass_fail",
+  "condition": "doc.pass_fail == 'Fail'",
+  "send_to_all_assignees": 0,
+  "recipients": [
+    {"receiver_by_role": "QC Analyst"},
+    {"receiver_by_role": "Lab Manager"},
+    {"receiver_by_role": "Pharma Admin"}
+  ],
+  "subject": "⚠ QC TEST FAILURE: {{ doc.test_id }} - {{ doc.test_name }}",
+  "message": "<p>Dear {{ user }},</p><p style='color:red'><b>ALERT: A QC Test has FAILED.</b></p><table border='1' cellpadding='5'><tr><td><b>Test ID</b></td><td>{{ doc.test_id }}</td></tr><tr><td><b>Test Name</b></td><td>{{ doc.test_name }}</td></tr><tr><td><b>Test Type</b></td><td>{{ doc.test_type }}</td></tr><tr><td><b>Batch</b></td><td>{{ doc.batch_no }}</td></tr><tr><td><b>Analyst</b></td><td>{{ doc.analyst }}</td></tr><tr><td><b>Result</b></td><td>{{ doc.result_value }} {{ doc.unit }}</td></tr><tr><td><b>Specification</b></td><td>{{ doc.specification }}</td></tr></table><p>An OOS (Out of Specification) investigation must be initiated immediately.</p>",
+  "is_standard": 1,
+  "module": "Pharma R&D"
+}

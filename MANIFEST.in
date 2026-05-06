@@ -1,0 +1,2 @@
+include MANIFEST.in
+recursive-include pharma_rd *.json *.js *.css *.html *.py *.md *.txt

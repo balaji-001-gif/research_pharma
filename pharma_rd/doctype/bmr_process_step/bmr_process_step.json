@@ -1,0 +1,18 @@
+{
+  "name": "BMR Process Step",
+  "module": "Pharma R&D",
+  "doctype": "DocType",
+  "istable": 1,
+  "fields": [
+    {"fieldname": "step_no",      "fieldtype": "Int",      "label": "Step",         "reqd": 1, "in_list_view": 1},
+    {"fieldname": "operation",    "fieldtype": "Data",     "label": "Operation",    "reqd": 1, "in_list_view": 1},
+    {"fieldname": "description",  "fieldtype": "Text",     "label": "Description",  "in_list_view": 1},
+    {"fieldname": "performed_by", "fieldtype": "Link",     "label": "Performed By", "options": "User"},
+    {"fieldname": "start_time",   "fieldtype": "Datetime", "label": "Start Time"},
+    {"fieldname": "end_time",     "fieldtype": "Datetime", "label": "End Time"},
+    {"fieldname": "parameters",   "fieldtype": "Small Text","label": "Process Parameters"},
+    {"fieldname": "observations", "fieldtype": "Small Text","label": "Observations"},
+    {"fieldname": "status",       "fieldtype": "Select",   "label": "Status",
+      "options": "Pending\nIn Progress\nCompleted\nSkipped\nDeviation", "default": "Pending", "in_list_view": 1}
+  ]
+}

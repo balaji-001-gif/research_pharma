@@ -1,0 +1,8 @@
+{
+  "is_standard": "Yes",
+  "name": "QC Test Results Summary",
+  "report_name": "QC Test Results Summary",
+  "report_type": "Script Report",
+  "ref_doctype": "QC Test",
+  "module": "Pharma R&D"
+}
