@@ -1,20 +1,31 @@
-app_name = "pharma_rd"
-app_title = "Pharma RD"
-app_publisher = "Your Company"
+app_name        = "pharma_rd"
+app_title       = "Pharma RD"
+app_publisher   = "Your Company"
 app_description = "Research and Pharma Development Application for Frappe v15+"
-app_email = "admin@yourcompany.com"
-app_license = "MIT"
-app_version = "0.0.1"
+app_email       = "admin@yourcompany.com"
+app_license     = "MIT"
+app_version     = "0.0.1"
 
 # ------ App include files -------
-# app_include_css = "/assets/pharma_rd/css/pharma_rd.css"
-# app_include_js  = "/assets/pharma_rd/js/pharma_rd.js"
+app_include_css = "/assets/pharma_rd/css/pharma_rd.css"
+app_include_js  = "/assets/pharma_rd/js/pharma_rd.js"
 
 # ------ DocType class overrides -------
 override_doctype_class = {}
 
 # ------ Document Events -------
-doc_events = {}
+doc_events = {
+    "Research Project": {
+        "on_submit": "pharma_rd.doctype.research_project.research_project.on_submit",
+        "on_cancel": "pharma_rd.doctype.research_project.research_project.on_cancel",
+    },
+    "Clinical Trial": {
+        "on_submit": "pharma_rd.doctype.clinical_trial.clinical_trial.on_submit",
+    },
+    "Batch Manufacturing Record": {
+        "on_submit": "pharma_rd.doctype.batch_manufacturing_record.batch_manufacturing_record.on_submit",
+    },
+}
 
 # ------ Scheduled Tasks -------
 scheduler_events = {
@@ -29,13 +40,16 @@ scheduler_events = {
 
 # ------ Fixtures -------
 fixtures = [
-    {"dt": "Custom Field",   "filters": [["module", "=", "pharma_rd"]]},
-    {"dt": "Property Setter","filters": [["module", "=", "pharma_rd"]]},
-    {"dt": "Module Def",     "filters": [["name", "=", "pharma_rd"]]},
-    {"dt": "Role",           "filters": [["name", "in", [
-        "Pharma Researcher", "Clinical Trial Manager",
-        "QC Analyst", "Regulatory Affairs Officer",
-        "Lab Manager", "Pharma Admin"
+    {"dt": "Custom Field",    "filters": [["module", "=", "Pharma RD"]]},
+    {"dt": "Property Setter", "filters": [["module", "=", "Pharma RD"]]},
+    {"dt": "Module Def",      "filters": [["name",   "=", "Pharma RD"]]},
+    {"dt": "Role", "filters": [["name", "in", [
+        "Pharma Researcher",
+        "Clinical Trial Manager",
+        "QC Analyst",
+        "Regulatory Affairs Officer",
+        "Lab Manager",
+        "Pharma Admin",
     ]]]},
 ]
 
