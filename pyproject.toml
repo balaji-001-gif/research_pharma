@@ -1,0 +1,23 @@
+[project]
+name = "pharma_rd"
+authors = [
+    { name = "Your Company", email = "admin@yourcompany.com"}
+]
+description = "Research and Pharma Development Application for Frappe v15+"
+requires-python = ">=3.10"
+readme = "README.md"
+license = { text = "MIT" }
+dynamic = ["version"]
+dependencies = [
+    # "frappe~=15.0.0"
+]
+
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.module]
+name = "pharma_rd"
+
+[project.urls]
+Homepage = "https://github.com/balaji-001-gif/pharma_rd"
