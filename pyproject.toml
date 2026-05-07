@@ -21,3 +21,6 @@ name = "pharma_rd"
 
 [project.urls]
 Homepage = "https://github.com/balaji-001-gif/pharma_rd"
+
+[project.entry-points."frappe_app"]
+pharma_rd = "pharma_rd:get_version"
