@@ -13,4 +13,7 @@ setup(
     zip_safe=False,
     include_package_data=True,
     install_requires=install_requires,
+    entry_points={
+        "frappe_app": "pharma_rd=pharma_rd:get_version",
+    },
 )
