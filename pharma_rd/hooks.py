@@ -31,6 +31,7 @@ scheduler_events = {
 fixtures = [
     {"dt": "Custom Field",   "filters": [["module", "=", "pharma_rd"]]},
     {"dt": "Property Setter","filters": [["module", "=", "pharma_rd"]]},
+    {"dt": "Module Def",     "filters": [["name", "=", "pharma_rd"]]},
     {"dt": "Role",           "filters": [["name", "in", [
         "Pharma Researcher", "Clinical Trial Manager",
         "QC Analyst", "Regulatory Affairs Officer",
